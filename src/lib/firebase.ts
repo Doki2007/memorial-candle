@@ -5,12 +5,12 @@ import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth'
 // ⚠️  Reemplaza estos valores con los de tu proyecto Firebase
 // Firebase Console → Project Settings → Your apps → SDK setup and configuration
 const firebaseConfig = {
-  apiKey:            import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain:        import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId:         import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket:     import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId:             import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey:            import.meta.env.VITE_FIREBASE_API_KEY            || 'AIzaSyCMAll9F-sWJSgK0T5TB8Z149u73fFY2B8',
+  authDomain:        import.meta.env.VITE_FIREBASE_AUTH_DOMAIN        || 'velita-memorial.firebaseapp.com',
+  projectId:         import.meta.env.VITE_FIREBASE_PROJECT_ID         || 'velita-memorial',
+  storageBucket:     import.meta.env.VITE_FIREBASE_STORAGE_BUCKET     || 'velita-memorial.firebasestorage.app',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '1095773149025',
+  appId:             import.meta.env.VITE_FIREBASE_APP_ID             || '1:1095773149025:web:424aefd91d1f6af211d720',
 }
 
 const app  = initializeApp(firebaseConfig)
