@@ -42,12 +42,15 @@ export default function CreateCandleModal ({ x, y, onClose, onCreated }: Props) 
     if (name.trim().length < 2)    { setError('El nombre debe tener al menos 2 caracteres.'); return }
     if (message.trim().length < 5) { setError('La dedicatoria debe tener al menos 5 caracteres.'); return }
     setSaving(true)
+    setError('')
     try {
       await addCandle(name.trim(), message.trim(), x, y)
       onCreated()
       animateClose(onClose)
-    } catch {
-      setError('Error al guardar. Intenta de nuevo.')
+    } catch (err: unknown) {
+      console.error('Error al encender vela:', err)
+      const msg = err instanceof Error ? err.message : 'Error al guardar. Intenta de nuevo.'
+      setError(msg)
       setSaving(false)
     }
   }
@@ -108,7 +111,7 @@ export default function CreateCandleModal ({ x, y, onClose, onCreated }: Props) 
             <p className="text-right text-xs text-parchment/60 mt-0.5">{message.length}/600</p>
           </div>
 
-          {error && <p className="text-xs text-red-400 font-medium">{error}</p>}
+          {error && <p className="text-xs text-red-400 font-medium text-center">{error}</p>}
 
           <div className="flex gap-3 mt-1">
             <button
