@@ -54,16 +54,13 @@ export default function MemorialHero () {
         <h1 className="font-serif text-3xl font-black tracking-tight text-ivory sm:text-5xl lg:text-6xl">
           Alberto Rafael Defilippi Portal
         </h1>
-        <p className="font-serif text-xl sm:text-2xl italic text-gold/90 tracking-wide">
-          “Tito”
-        </p>
       </div>
 
       {/* Separador ornamental de transición equilibrada */}
-      <div className="hero-child mx-auto mt-7 sm:mt-9 flex items-center justify-center gap-3">
-        <div className="h-px w-16 sm:w-28 bg-gradient-to-r from-transparent to-gold/40" />
+      <div className="hero-child mx-auto mt-7 sm:mt-10 flex items-center justify-center gap-3">
+        <div className="h-px w-16 sm:w-28 bg-linear-to-r from-transparent to-gold/40" />
         <span className="text-[10px] text-gold/60">✦</span>
-        <div className="h-px w-16 sm:w-28 bg-gradient-to-l from-transparent to-gold/40" />
+        <div className="h-px w-16 sm:w-28 bg-linear-to-l from-transparent to-gold/40" />
       </div>
     </header>
   )

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { gsap } from 'gsap'
 
 // 19 fotos: 0.webp → 18.webp
-const TOTAL = 20
+const TOTAL = 17
 const images = Array.from({ length: TOTAL }, (_, i) => ({
   src: `/gallery/${i}.webp`,
   alt: `Recuerdo de Tito — foto ${i + 1}`,

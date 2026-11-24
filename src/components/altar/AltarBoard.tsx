@@ -54,7 +54,7 @@ export default function AltarBoard () {
         </h2>
         <p className="mx-auto mt-3 max-w-md text-sm sm:text-base leading-relaxed text-[#D2C9BD]">
           Toca cualquier espacio vacío del altar para encender tu propia vela y dejar una dedicatoria
-          para Tito y su familia.
+          para Alberto y su familia.
         </p>
 
         {/* Contador + buscador — apilados en móvil, en fila en tablet+ */}
