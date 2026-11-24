@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
+import { initializeFirestore } from 'firebase/firestore'
 import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth'
 
 // ⚠️  Reemplaza estos valores con los de tu proyecto Firebase
@@ -14,7 +14,11 @@ const firebaseConfig = {
 }
 
 const app  = initializeApp(firebaseConfig)
-export const db   = getFirestore(app)
+
+// experimentalForceLongPolling resuelve el problema de canales colgados en navegadores web y proxies de Vercel
+export const db = initializeFirestore(app, {
+  experimentalForceLongPolling: true,
+})
 export const auth = getAuth(app)
 
 // Autenticación anónima automática al arrancar

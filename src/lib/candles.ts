@@ -57,9 +57,9 @@ export async function addCandle (
     createdAt: serverTimestamp(),
   })
 
-  // Timeout de 10s para que la UI nunca se quede congelada en "Encendiendo..."
+  // Timeout de 15s para dar margen en conexiones móviles
   const timeoutPromise = new Promise((_, reject) =>
-    setTimeout(() => reject(new Error('Tiempo de espera agotado. Verifica tu conexión.')), 10000)
+    setTimeout(() => reject(new Error('Tiempo de espera agotado. Verifica tu conexión.')), 15000)
   )
 
   await Promise.race([writePromise, timeoutPromise])
