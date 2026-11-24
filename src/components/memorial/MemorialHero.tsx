@@ -49,18 +49,22 @@ export default function MemorialHero () {
         </div>
       </div>
 
-      {/* Nombre completo */}
-      <h1 className="hero-child mt-5 font-serif text-3xl font-black tracking-tight text-ivory sm:text-5xl lg:text-6xl">
-        Alberto Rafael Defilippi Portal
-      </h1>
+      {/* Nombre completo y apodo entrañable */}
+      <div className="hero-child mt-6 sm:mt-7 space-y-1.5">
+        <h1 className="font-serif text-3xl font-black tracking-tight text-ivory sm:text-5xl lg:text-6xl">
+          Alberto Rafael Defilippi Portal
+        </h1>
+        <p className="font-serif text-xl sm:text-2xl italic text-gold/90 tracking-wide">
+          “Tito”
+        </p>
+      </div>
 
-      {/* Cita — cálida, nítida y legible */}
-      <p className="hero-child mx-auto mt-4 max-w-2xl px-2 font-serif text-base italic leading-relaxed text-ivory/90 sm:text-lg lg:text-xl font-normal">
-        "Para su barrio, Tito. Para el amor de su vida, Amore. Y para sus sobrinos, nuestro querido 'Gru',
-        con una nobleza inmensa detrás de su carácter resolutivo."
-      </p>
-
-      <div className="hero-child mx-auto mt-8 h-px w-24 bg-linear-to-r from-transparent via-gold/50 to-transparent" />
+      {/* Separador ornamental de transición equilibrada */}
+      <div className="hero-child mx-auto mt-7 sm:mt-9 flex items-center justify-center gap-3">
+        <div className="h-px w-16 sm:w-28 bg-gradient-to-r from-transparent to-gold/40" />
+        <span className="text-[10px] text-gold/60">✦</span>
+        <div className="h-px w-16 sm:w-28 bg-gradient-to-l from-transparent to-gold/40" />
+      </div>
     </header>
   )
 }
