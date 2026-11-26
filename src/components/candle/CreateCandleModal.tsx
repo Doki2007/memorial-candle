@@ -75,7 +75,7 @@ export default function CreateCandleModal ({ x, y, onClose, onCreated }: Props) 
           Enciende tu vela
         </h2>
         <p className="text-xs sm:text-sm text-[#D2C9BD] text-center mb-6 leading-relaxed">
-          Deja tu nombre y una dedicatoria íntima para Tito y su familia.
+          Deja tu nombre y una dedicatoria íntima para Alberto y su familia.
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -105,7 +105,7 @@ export default function CreateCandleModal ({ x, y, onClose, onCreated }: Props) 
               onChange={(e) => { setMessage(e.target.value); setError('') }}
               maxLength={600}
               rows={4}
-              placeholder="Escribe tu mensaje para Tito…"
+              placeholder="Escribe tu mensaje para Alberto…"
               className="w-full resize-none rounded-xl border border-gold/20 bg-obsidian/80 px-4 py-2.5 text-sm sm:text-base text-ivory placeholder:text-parchment/60 focus:outline-none focus:border-gold/60 transition"
             />
             <p className="text-right text-xs text-parchment/60 mt-0.5">{message.length}/600</p>

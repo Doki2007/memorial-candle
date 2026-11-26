@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 const TOTAL = 17
 const images = Array.from({ length: TOTAL }, (_, i) => ({
   src: `/gallery/${i}.webp`,
-  alt: `Recuerdo de Tito — foto ${i + 1}`,
+  alt: `Recuerdo de Alberto — foto ${i + 1}`,
 }))
 
 interface LightboxProps {
